@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>App de Animales</title>
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+   
+}
+body{
+   background: linear-gradient( #38f567,#38f567);
+    margin:400; 
+}
+
+.pantalla{
+    display: none;
+    padding: 20px;
+}
+
+.activa{
+    display: block;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+img{
+    width: 200px;
+    margin: 10px;
+}
+</style>
+
+<script>
+function mostrarPantalla(id){
+    let pantallas = document.getElementsByClassName("pantalla");
+    for(let i=0; i<pantallas.length; i++){
+        pantallas[i].classList.remove("activa");
+    }
+    document.getElementById(id).classList.add("activa");
+}
+</script>
+
+</head>
+
+
+<body>
+
+
+<div id="menu" class="pantalla activa">
+    <h1>App de Animales</h1>
+    <h3>Alumno: maria guadalupe perez</h3>
+
+    <button onclick="mostrarPantalla('abeja')">Abeja</button>
+    <button onclick="mostrarPantalla('mariposa')">Mariposa</button>
+    <button onclick="mostrarPantalla('gato')">murciélago</button>
+</div>
+
+
+<div id="abeja" class="pantalla">
+    <h2>La Abeja</h2>
+    <img src="abeja.webp">
+    <p>
+        La Abeja: Un Insecto Fascinante <br><br>
+
+    La abeja es un insecto volador que se encuentra en 
+    casi todo el mundo. <br>
+    Son conocidas por su papel 
+    crucial en la polinización de plantas y 
+    la producción de miel.<br>
+     Las abejas viven en colonias, con 
+    una reina que pone huevos y
+    miles de trabajadoras que se encargan de
+    cuidar a las crías y <br>recolectar néctar y polen. 
+    Son insectos sociales y
+    comunicativos, que se <br>SSScomunican a través de danzas y feromonas.<br> 
+    ¡Son verdaderas maravillas de la naturaleza!
+    </p>
+
+    <button onclick="mostrarPantalla('menu')">Regresar</button>
+</div>
+
+
+<div id="mariposa" class="pantalla">
+    <h2>La Mariposa</h2>
+    <img src="mariposa.webp">
+    <p>
+       La Mariposa: Un Símbolo de Transformación <br><br>
+
+    La mariposa es un insecto volador que se caracteriza por sus alas coloridas<br>
+     y delicadas. Nacen como huevos, se convierten en orugas, luego en pupas y finalmente<br>
+      emergen como mariposas adultas. Son polinizadoras importantes y se alimentan del <br>
+      néctar de las flores. Su ciclo de vida es un ejemplo de transformación y renovación. <br>
+      ¡Son criaturas hermosas y fascinantes!
+    </p>
+
+    <button onclick="mostrarPantalla('menu')">Regresar</button>
+</div>
+
+<div id="gato" class="pantalla">
+    <h2>El Murciélago</h2>
+    <img src="mursielago.webp">
+    <p>El Murciélago: Un Mamífero Volador<br><br>
+
+El murciélago es un mamífero que tiene la capacidad de volar, siendo el único<br>
+mamífero con esta habilidad. Existen muchas especies de murciélagos y pueden<br>
+alimentarse de insectos, frutas o néctar. Son animales nocturnos y utilizan<br>
+la ecolocalización para orientarse en la oscuridad, emitiendo sonidos y<br>
+escuchando el eco para detectar objetos y presas.<br>
+
+Los murciélagos son muy importantes para el equilibrio del ecosistema,<br>
+ya que ayudan a controlar plagas de insectos y a polinizar plantas.<br>
+¡Son criaturas fascinantes y muy útiles para la naturaleza!
+</p>
+    <button onclick="mostrarPantalla('menu')">Regresar</button>
+</div>
+
+</body>
+</html>
